@@ -1,0 +1,229 @@
+// Estilos por defecto (mobile-first): Estos estilos se aplican a las pantallas más pequeñas (0px a 575px).
+
+// Sección principal: Texto y imagen en columna para móviles
+.section-principal {
+  display: flex;
+  flex-direction: column; /* La imagen se colocará debajo del texto */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center;     /* Centra el contenido horizontalmente */
+  text-align: center;      /* Centra el texto */
+  gap: 1.5rem;             /* Espacio entre los elementos */
+  padding: 1rem;           /* Menos padding en pantallas pequeñas */
+}
+
+.texto {
+  width: 90%; /* Ancho del texto en móviles */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.imagen {
+  width: 100%; /* La imagen ocupará el 100% del ancho disponible en móviles */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  margin-bottom: 1rem;
+
+  img { /* Estilos para la imagen dentro del contenedor .imagen */
+    width: 100%;
+    max-width: 400px; /* Un ancho máximo razonable para evitar que se estire demasiado */
+    height: auto;     /* Mantiene la proporción */
+    padding: 0;
+  }
+}
+
+.titulo {
+  font-size: 1.8rem; /* Tamaño del título en móviles */
+}
+
+// Estilos para los diseños de Madame Gaga y Arquitista (cards)
+.logo-madame,
+.discos-madame,
+.cartel-madame,
+.caja-madame {
+  flex-direction: column; /* Elementos en columna por defecto */
+  align-items: center;    /* Centra horizontalmente */
+  text-align: center;
+
+  img {
+    width: 90%;          /* Ancho de la imagen de la card */
+    max-width: 100%;     /* Evita que se desborde */
+    margin-bottom: 1rem; /* Espacio debajo de la imagen */
+  }
+
+  .p-madame {
+    max-width: 100%;
+    text-align: center;
+    padding: 10px; // Puedes probar con 'padding: 5px 10px;' si es demasiado vertical en móvil
+  }
+}
+
+.madame,
+.discos,
+.cartel,
+.caja {
+  width: 90%; /* Ajusta el ancho de estas imágenes para móviles */
+  max-width: 400px; /* Un máximo para que no se estiren demasiado */
+}
+
+.arq {
+  flex-direction: column; /* Elementos en columna por defecto */
+  align-items: center;
+  text-align: center;
+  gap: 1rem; /* Espacio entre el logo, texto e imagen */
+
+  .logo-arq {
+    width: 80%; /* Ajusta según necesidad */
+    max-width: 200px; /* Ancho máximo para el logo */
+  }
+
+  .p-arq {
+    max-width: 90%; /* Ancho del párrafo */
+    padding: 10px;
+  }
+
+  .img-arq {
+    max-width: 100%; /* La imagen principal de Arquitista */
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+// Estilos para la sección de señalética (imágenes en cuadrícula)
+.img-senal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+
+  img {
+    width: 48%; /* Para mostrar 2 imágenes por fila en móviles (aprox.) */
+    height: auto;
+  }
+}
+
+// Estilos para la imagen de la revista
+.revista { // Apuntando directamente a la imagen con la clase .revista
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+  height: auto;    /* Mantiene la proporción de la imagen */
+  display: block;  /* Hace que se comporte como un bloque para poder centrarla */
+  margin: 0 auto;  /* Centra la imagen horizontalmente */
+  padding: 20px 0; /* Un poco de padding vertical */
+}
+
+
+// Estilos del formulario
+.form-grid {
+  grid-template-columns: 1fr; /* Una columna por defecto */
+  max-width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  .form-field.full {
+    grid-column: span 1;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+// Estilos de Contacto
+.contacto-grid {
+  grid-template-columns: 1fr; /* Una columna por defecto */
+}
+
+.contacto-texto,
+.contacto-imagen {
+  width: 100%;
+}
+
+.contenedor-contacto {
+  padding: 0.5rem; /* Padding más pequeño para móviles */
+}
+
+// Estilos del Footer
+.footer-logo {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-contacto {
+  align-items: center;
+}
+
+
+// --- Media Query para pantallas pequeñas (sm: desde 576px y más grandes) ---
+// Aquí puedes ajustar elementos que se comporten un poco diferente en tablets verticales.
+@include responsive(sm) {
+  .navbar-brand img {
+    max-width: 120px; /* Logo un poco más grande que en móvil puro */
+  }
+
+  .img-senal {
+    img {
+      width: 30%; /* Intenta 3 imágenes por fila para pantallas sm */
+    }
+  }
+
+  // Puedes añadir más ajustes finos para este breakpoint si es necesario
+}
+
+// --- Media Query para pantallas medianas (md: desde 768px y más grandes) ---
+// Estos estilos se aplican a partir de tablets horizontales y desktops.
+@include responsive(md) {
+  // Sección principal: Texto y imagen uno al lado del otro
+  .section-principal {
+    flex-direction: row; /* Ahora sí, se coloca en fila */
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    text-align: left;
+    padding: 60px 60px 0px 60px; /* Vuelve al padding original para desktop */
+    gap: 2rem;
+  }
+
+  .texto {
+    flex: 1 1 55%;
+    max-width: 500px;
+    text-align: left;
+  }
+
+  .imagen {
+    flex: 1 1 40%;
+    justify-content: center;
+    margin-bottom: 0;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  .titulo {
+    font-size: 35pt; /* Tamaño del título para desktop */
+  }
+
+  // Estilos para Madame Gaga y Arquitista (cards) en pantallas más grandes
+  .madame,
+  .discos,
+  .cartel,
+  .caja {
+    width: 50%; }
+  
+    .p-madame {
+      // flex: 1 1 auto; // Mantener este es bueno.
+      max-width: 600px;
+      
+                        // Si lo quitas, el párrafo se encogerá al tamaño de su contenido si hay espacio.
+      text-align: left;
+      padding: 10px 30px; // <--- Reducido el padding vertical de 15px a 10px
+    }
+  
+  }

@@ -1,0 +1,40 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: $color-bg;
+  text-align: left;
+  padding: 20px;
+   padding-top: 40px;
+  margin-top: 40px;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    @extend %font-base;
+  }
+
+  .footer-logo img {
+    max-width: 80px;
+    height: auto;
+  }
+
+  .footer-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .contacto {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+      }
+    }
+  }
+}

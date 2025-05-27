@@ -1,0 +1,106 @@
+.section-principal {
+  width: 100%;
+  background-color: $color-bg;
+  padding: 60px 60px 0px 60px;
+  
+  margin: 0 auto;
+display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+   overflow-x: hidden;
+   flex-wrap: wrap;
+  
+}
+  .texto {
+
+     flex: 1 1 55%;
+    max-width: 500px;
+    text-align: left;
+    margin: 0;
+  }
+
+  .imagen {
+   flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; // También puede ayudar si querés alinear imagen arriba
+    img {
+     width: 100%;
+      max-width: 500px;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      
+    }
+  }
+
+
+.titulo {
+  color: $color-accent;
+  font-size: 35pt;
+  font-weight: bolder;
+  @extend %font-base;
+}
+
+.subtitulo,
+.sub,
+.sub-contacto {
+  color: $color-accent;
+  font-size: 25pt;
+  text-align: center;
+  font-weight: bolder;
+  padding: 30px 0;
+  @extend %font-base;
+}
+
+.descripcion {
+  text-align: center;
+  margin: auto;
+  max-width: 700px;
+ 
+}
+
+.habilidades {
+  color: $color-text;
+  font-size: 20pt;
+  @extend %font-base;
+}
+
+.contenedor-habilidades {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+
+  .bloque-habilidad {
+    background-color: $color-bg;
+    padding: 40px;
+    border-radius: 20px;
+      width: 300px;
+    
+   
+
+    img {
+      padding: 20px;
+      width: 80%;
+      height: auto;
+    }
+  }
+}
+
+.contenedor-experiencia {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .bloque-experiencia {
+    background-color: $color-bg;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
+    width: 260px;
+  }
+}

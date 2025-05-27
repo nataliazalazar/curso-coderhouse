@@ -1,0 +1,122 @@
+.logo-madame,
+.discos-madame,
+.cartel-madame,
+.caja-madame {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.madame,
+.discos,
+.cartel,
+.caja {
+  width: 50%;
+}
+
+.p-madame {
+  flex: 1 1 100px;
+  text-align: left;
+  padding: 30px;
+  margin: 0;
+}
+
+.arq {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+
+  .logo-arq {
+    width: 30%;
+  }
+
+ .p-arq {
+  flex: 1 1 300px;
+  max-width: 600px;
+  min-width: 250px;
+  text-align: left;
+  padding: 20px;
+}
+
+  .img-arq {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
+.img-senal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+
+  img {
+    width: 22%;
+    height: auto;
+  }
+}
+
+.img-cruz {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor-cruz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna-contenedor {
+  flex: 1;
+  text-align: left;
+  padding: 30px 70px;
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+.revista {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+  height: auto;    /* Mantiene la proporción de la imagen */
+  display: block;  /* Hace que se comporte como un bloque para poder centrarla */
+  margin: 0 auto;  /* Centra la imagen horizontalmente */
+  padding: 10px 0; /* Un poco de padding vertical, ajusta si es necesario */
+  // Si quieres que tenga un ancho máximo específico en pantallas grandes, puedes añadirlo aquí
+  // Por ejemplo: max-width: 800px;
+}
+
+.logo-arq {
+  width: 60%;
+
+  img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+  }
+}
+
+.img-arq {
+  max-width: 90%;
+  height: auto;
+  display: block;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}

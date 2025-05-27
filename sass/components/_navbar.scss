@@ -1,0 +1,25 @@
+.navbar-nav {
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li a {
+    text-decoration: none;
+    color: $color-text;
+    @extend %font-base;
+    white-space: nowrap;
+  }
+}
+
+.navbar-brand {
+  margin-left: 20px;
+
+  img {
+    max-width: 160px;
+    height: auto;
+    transition: all 0.3s ease;
+  }
+}
+

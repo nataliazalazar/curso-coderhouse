@@ -1,539 +1,539 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-/*font-family: "Montserrat", sans-serif;
-font-optical-sizing: auto;
-font-weight: <weight>;
-font-style: normal*/
-
-.navbar-brand {
-  padding-left: 70px ; 
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.habilidades, .subtitulo,
+.sub,
+.sub-contacto, .titulo, .navbar-nav li a, input[type=text],
+input[type=email],
+textarea, footer p, body {
+  font-family: "Montserrat", sans-serif;
 }
 
-
-*{
-    margin: 0;
-    padding: 0;
-
+input[type=submit] {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-header{
-    background-color: #ededed;
-    color: #000000;
-    padding:20px 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px; 
-
-}
-.logo img{
-    max-width: 160px; 
-    height: auto;
-    padding: 0; 
-    
-}
-.navbar{
-    list-style: none;
-    display: flex;
-    gap: 40px; 
-    list-style: none;
-    margin: 0;
-    padding: 0;
+body {
+  color: #000000;
 }
 
-.navbar li a{
-    text-decoration: none;
-    color: #000000;
-    font-family:"Montserrat", sans-serif;
-    white-space: nowrap;
-
+header {
+  background-color: #ededed;
+  color: #000000;
+  padding: 20px 0;
 }
 
-/*etiquetas del index y sobre mi*/
-
-.section-principal {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ededed;
-    flex-wrap: wrap; /* Permite apilar en pantallas pequeñas */
-    padding: 20px 50px 0 50px; /* Elimina el padding inferior (20px en los costados y arriba, 0px abajo) */
-    margin-bottom: 0;
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
 }
-
-.texto {
-    flex: 1;
-    text-align: left;
-    max-width: 40%;
-    padding: 0px;
-}
-
-.imagen {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.imagen img {
-    max-width: 90%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-}
-
-.titulo {
-    color: #FF6633;
-    font-family: "Montserrat", sans-serif;
-    font-size: 35pt;
-    font-weight: bolder;
-}
-
-/* 📱 Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
-    .section-principal {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-    }
-
-    .texto {
-        max-width: 100%;
-        padding: 20px 0px 0;
-    }
-
-    .titulo {
-        font-size: 24pt;
-    }
-
-    .imagen {
-        justify-content: center;
-        margin-top: 0px;
-    }
-
-    .imagen img {
-        max-width: 80%;
-        padding: 0;
-        
-    }
-}
-
-/*etiquetas del index*/
-.descripcion{
-    text-align: center;
-    margin: 50px auto;
-    max-width: 700px;
-    padding:20px;
-}
-.subtitulo{
-    color: #FF6633;
-    font-family: "Montserrat", sans-serif;
-    font-size: 25pt;
-    text-align: center;
-    padding: 30px 0px;
-    font-weight: bolder;
-}
-
-.habilidades{
-    color: #000000;
-    font-family: "Montserrat", sans-serif;
-    font-size: 20pt;
-}
-
-.contenedor-habilidades{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px 40px;
-    flex-wrap: wrap; 
-    text-align: center;
-    padding: 20px 0;
-}
-
-.bloque-habilidad {
-    background-color: #ededed; 
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    width: 260px;
-    box-sizing: border-box;
-}
-
-.bloque-habilidad img {
-    padding: 20px;
-    width: 80%;
-    height: auto;
-}
-
-.for{
-    color: #000000;
-    font-family: "Montserrat", sans-serif;
-    
-}
-.sub{
-    color: #FF6633;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    padding: 0px 0px 10px;
-    font-weight: bolder;
-}
-
-.sub-contacto{
-    color: #FF6633;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    padding: 0px 0px 10px;
-    font-weight: bolder;
-    margin-top: 40px;
-}
-
-
-.p{
-    font-family: "Montserrat", sans-serif;
-    
-    
-}
-
-.p-sub{
-    font-family: "Montserrat", sans-serif;
-    font-weight: bolder;
-}
-
-/*etiquetas del sobre mi*/
-
-.contenedor-experiencia{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; 
-    padding:0;
-}
-.bloque-experiencia{
-    background-color: #ededed; 
-    padding: 20px;
-    border-radius: 20px;
-    text-align: left;
-    width: 260px;
-    box-sizing: border-box;
-}
-
-/*etiquetas de disenos*/
-.logo-madame{
-    display: flex;
-    flex: wrap;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: center;
-}
-
-.madame{
-    width: 30%;
-
-}
-
-.p-madame{
-    text-align: right;
-    max-width: 30%;
-    padding: 50px;
-}
-
-.discos-madame{
-    display: flex;
-    flex: wrap;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: center;
-}
-
-.discos{
-    width: 50%;
-}
-
-.cartel-madame{
-    display: flex;
-    flex: wrap;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: center;
-}
-
-.cartel{
-    width: 50%;
-}
-
-.caja-madame{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: center;
-}
-
-.caja{
-    width: 50%;
-}
-
-.revista{
-    display: block;
-    margin: 0 auto;
-    max-width: 90%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-  .madame,
-  .discos,
-  .cartel,
-  .caja {
-    width: 80%;
-  }
-
-  .p-madame {
-    max-width: 100%;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .logo-madame,
-  .discos-madame,
-  .cartel-madame,
-  .caja-madame {
-    flex-direction: column;
-  }
-}
-
-.arq {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    gap: 20px;
-}
-
-.logo-arq {
-    width: 30%;
-}
-
-.p-arq {
-    max-width: 50%;
-    text-align: center;
-    padding: 20px;
-}
-
-.img-arq {
-    display: block;
-    margin: 0 auto;
-    max-width: 90%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-  .arq {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .logo-arq {
-    width: 60%;
-  }
-
-  .p-arq {
-    max-width: 90%;
-    padding: 10px;
-  }
-
-  .img-arq {
-    max-width: 100%;
-    padding: 10px 0;
-  }
-}
-
-
-.img-senal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-}
-.img-senal img {
-    max-width: 100%;
-    height: auto;
-    width: 22%;
-}
-
-/*etiquetas de proyectos*/
-
-.img-cruz{
-    max-width: 100%;
-    height: auto;
-}
-
-.contenedor-cruz{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-  .contenedor-cruz {
-    flex-direction: column;
-  }
-
-.columna-contenedor {
-    max-width: 100%;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .columna-contenedor p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-}
-
-.columna-contenedor{
-    flex: 1;
-    text-align: left;
-    padding: 30px 70px;
-    box-sizing: border-box;
-}
-.columna-contenedor p{
-font-size: 1rem;  
-    line-height: 1.6;  
-    margin-bottom: 1rem;  
+.logo img {
+  max-width: 160px;
+  height: auto;
 }
 
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: #ededed;
   text-align: left;
+  padding: 20px;
+  padding-top: 40px;
+  margin-top: 40px;
 }
-
-.footer-logo img {
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+footer .footer-logo img {
   max-width: 80px;
   height: auto;
 }
-
-.footer-contacto {
+footer .footer-contacto {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
-.contacto {
+footer .footer-contacto .contacto {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
-.contacto img {
+footer .footer-contacto .contacto img {
   width: 20px;
   height: 20px;
   object-fit: contain;
 }
 
-footer p {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+.section-principal {
+  display: flex;
+  flex-direction: column; /* La imagen se colocará debajo del texto */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto */
+  gap: 1.5rem; /* Espacio entre los elementos */
+  padding: 1rem; /* Menos padding en pantallas pequeñas */
 }
 
-@media (max-width: 576px) {
-  .footer-logo {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-contacto {
-    align-items: center;
-  }
+.texto {
+  width: 90%; /* Ancho del texto en móviles */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
+.imagen {
+  width: 100%; /* La imagen ocupará el 100% del ancho disponible en móviles */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  margin-bottom: 1rem;
+}
+.imagen img { /* Estilos para la imagen dentro del contenedor .imagen */
+  width: 100%;
+  max-width: 400px; /* Un ancho máximo razonable para evitar que se estire demasiado */
+  height: auto; /* Mantiene la proporción */
+  padding: 0;
+}
 
-/*etiquetas de contacto*/
+.titulo {
+  font-size: 1.8rem; /* Tamaño del título en móviles */
+}
+
+.logo-madame,
+.discos-madame,
+.cartel-madame,
+.caja-madame {
+  flex-direction: column; /* Elementos en columna por defecto */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center;
+}
+.logo-madame img,
+.discos-madame img,
+.cartel-madame img,
+.caja-madame img {
+  width: 90%; /* Ancho de la imagen de la card */
+  max-width: 100%; /* Evita que se desborde */
+  margin-bottom: 1rem; /* Espacio debajo de la imagen */
+}
+.logo-madame .p-madame,
+.discos-madame .p-madame,
+.cartel-madame .p-madame,
+.caja-madame .p-madame {
+  max-width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.madame,
+.discos,
+.cartel,
+.caja {
+  width: 90%; /* Ajusta el ancho de estas imágenes para móviles */
+  max-width: 400px; /* Un máximo para que no se estiren demasiado */
+}
+
+.arq {
+  flex-direction: column; /* Elementos en columna por defecto */
+  align-items: center;
+  text-align: center;
+  gap: 1rem; /* Espacio entre el logo, texto e imagen */
+}
+.arq .logo-arq {
+  width: 80%; /* Ajusta según necesidad */
+  max-width: 200px; /* Ancho máximo para el logo */
+}
+.arq .p-arq {
+  max-width: 90%; /* Ancho del párrafo */
+  padding: 10px;
+}
+.arq .img-arq {
+  max-width: 100%; /* La imagen principal de Arquitista */
+  height: auto;
+  padding: 10px 0;
+}
+
+.img-senal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+.img-senal img {
+  width: 48%; /* Para mostrar 2 imágenes por fila en móviles (aprox.) */
+  height: auto;
+}
+
+.revista {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Hace que se comporte como un bloque para poder centrarla */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  padding: 20px 0; /* Un poco de padding vertical */
+}
+
 .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 800px;
-    margin: auto;
-    padding: 30px;
+  grid-template-columns: 1fr; /* Una columna por defecto */
+  max-width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.form-grid .form-field.full {
+  grid-column: span 1;
 }
 
-.form-field {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-field.full {
-    grid-column: span 2; /* Ocupar ambas columnas */
-}
-
-input[type="text"],
-input[type="email"],
+input[type=text],
+input[type=email],
 textarea {
-    padding: 10px;
-    font-family: "Montserrat", sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
+  width: 100%;
+  max-width: 100%;
 }
 
-input[type="submit"] {
-    background-color: #FF6633;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    font-family: "Montserrat", sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.contacto-grid {
+  grid-template-columns: 1fr; /* Una columna por defecto */
 }
 
-input[type="submit"]:hover {
-    background-color: #e5552c;
+.contacto-texto,
+.contacto-imagen {
+  width: 100%;
 }
 
-@media (max-width: 768px) {
-    .form-grid {
-        grid-template-columns: 1fr; /* Solo una columna */
-    }
-
-    .form-field.full {
-        grid-column: span 1; /* Ya no necesita ocupar 2 columnas */
-    }
+.contenedor-contacto {
+  padding: 0.5rem; /* Padding más pequeño para móviles */
 }
 
+.footer-logo {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+.footer-contacto {
+  align-items: center;
+}
 
+@media (min-width: 576px) {
+  .navbar-brand img {
+    max-width: 120px; /* Logo un poco más grande que en móvil puro */
+  }
+  .img-senal img {
+    width: 30%; /* Intenta 3 imágenes por fila para pantallas sm */
+  }
+}
+@media (min-width: 768px) {
+  .section-principal {
+    flex-direction: row; /* Ahora sí, se coloca en fila */
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    text-align: left;
+    padding: 60px 60px 0px 60px; /* Vuelve al padding original para desktop */
+    gap: 2rem;
+  }
+  .texto {
+    flex: 1 1 55%;
+    max-width: 500px;
+    text-align: left;
+  }
+  .imagen {
+    flex: 1 1 40%;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .imagen img {
+    width: 100%;
+    max-width: 500px;
+  }
+  .titulo {
+    font-size: 35pt; /* Tamaño del título para desktop */
+  }
+  .madame,
+  .discos,
+  .cartel,
+  .caja {
+    width: 50%;
+  }
+  .p-madame {
+    max-width: 600px;
+    text-align: left;
+    padding: 10px 30px;
+  }
+}
+.logo-madame,
+.discos-madame,
+.cartel-madame,
+.caja-madame {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.madame,
+.discos,
+.cartel,
+.caja {
+  width: 50%;
+}
+
+.p-madame {
+  flex: 1 1 100px;
+  text-align: left;
+  padding: 30px;
+  margin: 0;
+}
+
+.arq {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+}
+.arq .logo-arq {
+  width: 30%;
+}
+.arq .p-arq {
+  flex: 1 1 300px;
+  max-width: 600px;
+  min-width: 250px;
+  text-align: left;
+  padding: 20px;
+}
+.arq .img-arq {
+  max-width: 90%;
+  height: auto;
+}
+
+.img-senal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+}
+.img-senal img {
+  width: 22%;
+  height: auto;
+}
+
+.img-cruz {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor-cruz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna-contenedor {
+  flex: 1;
+  text-align: left;
+  padding: 30px 70px;
+}
+.columna-contenedor p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.revista {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Hace que se comporte como un bloque para poder centrarla */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  padding: 10px 0; /* Un poco de padding vertical, ajusta si es necesario */
+}
+
+.logo-arq {
+  width: 60%;
+}
+.logo-arq img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+}
+
+.img-arq {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+.img-arq img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+}
+.form-grid .form-field {
+  display: flex;
+  flex-direction: column;
+}
+.form-grid .form-field.full {
+  grid-column: span 2;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #FF6633;
+  color: white;
+}
+input[type=submit]:hover {
+  background-color: rgb(255, 63.75, 0);
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar-nav li a {
+  text-decoration: none;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
 .navbar-brand img {
   max-width: 160px;
   height: auto;
   transition: all 0.3s ease;
 }
 
-@media (max-width: 576px) {
-  .navbar-brand img {
-    max-width: 100px; /* o 80px si querés que sea más chico */
-  }
+.section-principal {
+  width: 100%;
+  background-color: #ededed;
+  padding: 60px 60px 0px 60px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow-x: hidden;
+  flex-wrap: wrap;
 }
 
+.texto {
+  flex: 1 1 55%;
+  max-width: 500px;
+  text-align: left;
+  margin: 0;
+}
 
+.imagen {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.imagen img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.titulo {
+  color: #FF6633;
+  font-size: 35pt;
+  font-weight: bolder;
+}
+
+.subtitulo,
+.sub,
+.sub-contacto {
+  color: #FF6633;
+  font-size: 25pt;
+  text-align: center;
+  font-weight: bolder;
+  padding: 30px 0;
+}
+
+.descripcion {
+  text-align: center;
+  margin: auto;
+  max-width: 700px;
+}
+
+.habilidades {
+  color: #000000;
+  font-size: 20pt;
+}
+
+.contenedor-habilidades {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.contenedor-habilidades .bloque-habilidad {
+  background-color: #ededed;
+  padding: 40px;
+  border-radius: 20px;
+  width: 300px;
+}
+.contenedor-habilidades .bloque-habilidad img {
+  padding: 20px;
+  width: 80%;
+  height: auto;
+}
+
+.contenedor-experiencia {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.contenedor-experiencia .bloque-experiencia {
+  background-color: #ededed;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+  width: 260px;
+}
+
+/*# sourceMappingURL=style.css.map */
