@@ -78,170 +78,21 @@ footer .footer-contacto .contacto img {
   object-fit: contain;
 }
 
-.section-principal {
-  display: flex;
-  flex-direction: column; /* La imagen se colocará debajo del texto */
-  justify-content: center; /* Centra el contenido verticalmente */
-  align-items: center; /* Centra el contenido horizontalmente */
-  text-align: center; /* Centra el texto */
-  gap: 1.5rem; /* Espacio entre los elementos */
-  padding: 1rem; /* Menos padding en pantallas pequeñas */
-}
-
-.texto {
-  width: 90%; /* Ancho del texto en móviles */
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.imagen {
-  width: 100%; /* La imagen ocupará el 100% del ancho disponible en móviles */
-  display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  margin-bottom: 1rem;
-}
-.imagen img { /* Estilos para la imagen dentro del contenedor .imagen */
-  width: 100%;
-  max-width: 400px; /* Un ancho máximo razonable para evitar que se estire demasiado */
-  height: auto; /* Mantiene la proporción */
-  padding: 0;
-}
-
-.titulo {
-  font-size: 1.8rem; /* Tamaño del título en móviles */
-}
-
-.logo-madame,
-.discos-madame,
-.cartel-madame,
-.caja-madame {
-  flex-direction: column; /* Elementos en columna por defecto */
-  align-items: center; /* Centra horizontalmente */
-  text-align: center;
-}
-.logo-madame img,
-.discos-madame img,
-.cartel-madame img,
-.caja-madame img {
-  width: 90%; /* Ancho de la imagen de la card */
-  max-width: 100%; /* Evita que se desborde */
-  margin-bottom: 1rem; /* Espacio debajo de la imagen */
-}
-.logo-madame .p-madame,
-.discos-madame .p-madame,
-.cartel-madame .p-madame,
-.caja-madame .p-madame {
-  max-width: 100%;
-  text-align: center;
-  padding: 10px;
-}
-
-.madame,
-.discos,
-.cartel,
-.caja {
-  width: 90%; /* Ajusta el ancho de estas imágenes para móviles */
-  max-width: 400px; /* Un máximo para que no se estiren demasiado */
-}
-
-.arq {
-  flex-direction: column; /* Elementos en columna por defecto */
-  align-items: center;
-  text-align: center;
-  gap: 1rem; /* Espacio entre el logo, texto e imagen */
-}
-.arq .logo-arq {
-  width: 80%; /* Ajusta según necesidad */
-  max-width: 200px; /* Ancho máximo para el logo */
-}
-.arq .p-arq {
-  max-width: 90%; /* Ancho del párrafo */
-  padding: 10px;
-}
-.arq .img-arq {
-  max-width: 100%; /* La imagen principal de Arquitista */
-  height: auto;
-  padding: 10px 0;
-}
-
-.img-senal {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px;
-}
-.img-senal img {
-  width: 48%; /* Para mostrar 2 imágenes por fila en móviles (aprox.) */
-  height: auto;
-}
-
-.revista {
-  max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  display: block; /* Hace que se comporte como un bloque para poder centrarla */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
-  padding: 20px 0; /* Un poco de padding vertical */
-}
-
-.form-grid {
-  grid-template-columns: 1fr; /* Una columna por defecto */
-  max-width: 100%;
-  padding: 1rem;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-.form-grid .form-field.full {
-  grid-column: span 1;
-}
-
-input[type=text],
-input[type=email],
-textarea {
-  width: 100%;
-  max-width: 100%;
-}
-
-.contacto-grid {
-  grid-template-columns: 1fr; /* Una columna por defecto */
-}
-
-.contacto-texto,
-.contacto-imagen {
-  width: 100%;
-}
-
-.contenedor-contacto {
-  padding: 0.5rem; /* Padding más pequeño para móviles */
-}
-
-.footer-logo {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.footer-contacto {
-  align-items: center;
-}
-
 @media (min-width: 576px) {
   .navbar-brand img {
-    max-width: 120px; /* Logo un poco más grande que en móvil puro */
+    max-width: 120px;
   }
   .img-senal img {
-    width: 30%; /* Intenta 3 imágenes por fila para pantallas sm */
+    width: 30%;
   }
 }
 @media (min-width: 768px) {
   .section-principal {
-    flex-direction: row; /* Ahora sí, se coloca en fila */
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    align-items: flex-start;
     text-align: left;
-    padding: 60px 60px 0px 60px; /* Vuelve al padding original para desktop */
+    padding: 60px 60px 0px 60px;
     gap: 2rem;
   }
   .texto {
@@ -259,45 +110,80 @@ textarea {
     max-width: 500px;
   }
   .titulo {
-    font-size: 35pt; /* Tamaño del título para desktop */
-  }
-  .madame,
-  .discos,
-  .cartel,
-  .caja {
-    width: 50%;
-  }
-  .p-madame {
-    max-width: 600px;
-    text-align: left;
-    padding: 10px 30px;
+    font-size: 35pt;
   }
 }
-.logo-madame,
+.logo-madame {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.logo-madame img {
+  width: 250px;
+  height: auto;
+  display: block;
+}
+.logo-madame .p-madame {
+  max-width: 500px;
+  text-align: left;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Discos, cartel y caja los dejamos iguales pero mejorados también para coherencia */
 .discos-madame,
 .cartel-madame,
 .caja-madame {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 0;
-  align-items: center;
+  padding: 20px 0;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
-
-.madame,
-.discos,
-.cartel,
-.caja {
-  width: 50%;
+.discos-madame img,
+.cartel-madame img,
+.caja-madame img {
+  width: 250px;
+  height: auto;
+  display: block;
 }
-
-.p-madame {
-  flex: 1 1 100px;
+.discos-madame .p-madame,
+.cartel-madame .p-madame,
+.caja-madame .p-madame {
+  max-width: 500px;
   text-align: left;
-  padding: 30px;
+  padding: 20px;
   margin: 0;
 }
 
+/* Responsive para mobile */
+@media (max-width: 768px) {
+  .logo-madame,
+  .discos-madame,
+  .cartel-madame,
+  .caja-madame {
+    flex-direction: column;
+  }
+  .logo-madame img,
+  .discos-madame img,
+  .cartel-madame img,
+  .caja-madame img {
+    width: 80%;
+    max-width: 300px;
+  }
+  .logo-madame .p-madame,
+  .discos-madame .p-madame,
+  .cartel-madame .p-madame,
+  .caja-madame .p-madame {
+    text-align: center;
+    padding: 10px;
+  }
+}
 .arq {
   display: flex;
   flex-wrap: wrap;
@@ -534,6 +420,173 @@ input[type=submit]:hover {
   border-radius: 20px;
   text-align: left;
   width: 260px;
+}
+
+.bloque-habilidad {
+  background-color: #ededed;
+  padding: 40px;
+  border-radius: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .bloque-habilidad:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+.bloque-habilidad img {
+  padding: 20px;
+  width: 80%;
+  height: auto;
+}
+
+.contenedor-experiencia {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.contenedor-experiencia .bloque-experiencia {
+  background-color: #ededed;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .contenedor-experiencia .bloque-experiencia:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  z-index: 0;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon i {
+  z-index: 1;
+  font-size: 22px;
+  color: #000;
+}
+.wrapper .icon::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  z-index: -1;
+  border-radius: 50%;
+  top: 100%;
+}
+.wrapper .icon:hover::after {
+  animation: bg-pos 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  animation-timing-function: ease-in-out;
+}
+.wrapper .icon:hover {
+  overflow: unset;
+  animation: overflow-toggle 0.7s;
+}
+.wrapper .icon:hover i {
+  color: #fff;
+  transition: color 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .facebook::after {
+  background-color: #1877f2;
+}
+.wrapper .twitter::after {
+  background-color: #1da1f2;
+}
+.wrapper .instagram::after {
+  background-color: #e4405f;
+}
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+@keyframes bg-pos {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes overflow-toggle {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

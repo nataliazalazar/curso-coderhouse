@@ -1,26 +1,70 @@
-.logo-madame,
+.logo-madame {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  img {
+    width: 250px;
+    height: auto;
+    display: block;
+  }
+
+  .p-madame {
+    max-width: 500px;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+  }
+}
+
+/* Discos, cartel y caja los dejamos iguales pero mejorados también para coherencia */
+
 .discos-madame,
 .cartel-madame,
 .caja-madame {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 0;
-  align-items: center;
+  padding: 20px 0;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  img {
+    width: 250px;
+    height: auto;
+    display: block;
+  }
+
+  .p-madame {
+    max-width: 500px;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+  }
 }
 
-.madame,
-.discos,
-.cartel,
-.caja {
-  width: 50%;
-}
+/* Responsive para mobile */
+@media (max-width: 768px) {
+  .logo-madame,
+  .discos-madame,
+  .cartel-madame,
+  .caja-madame {
+    flex-direction: column;
 
-.p-madame {
-  flex: 1 1 100px;
-  text-align: left;
-  padding: 30px;
-  margin: 0;
+    img {
+      width: 80%;
+      max-width: 300px;
+    }
+
+    .p-madame {
+      text-align: center;
+      padding: 10px;
+    }
+  }
 }
 
 .arq {

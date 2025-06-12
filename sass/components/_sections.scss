@@ -54,6 +54,8 @@ display: flex;
   @extend %font-base;
 }
 
+
+
 .descripcion {
   text-align: center;
   margin: auto;
@@ -80,7 +82,7 @@ display: flex;
     border-radius: 20px;
       width: 300px;
     
-   
+  
 
     img {
       padding: 20px;
@@ -102,5 +104,51 @@ display: flex;
     border-radius: 20px;
     text-align: left;
     width: 260px;
+  }
+}
+
+
+.bloque-habilidad {
+  background-color: $color-bg;
+  padding: 40px;
+  border-radius: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  // Efecto hover solo para pantallas grandes
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  img {
+    padding: 20px;
+    width: 80%;
+    height: auto;
+  }
+}
+
+.contenedor-experiencia {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .bloque-experiencia {
+    background-color: $color-bg;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
+    width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
   }
 }
