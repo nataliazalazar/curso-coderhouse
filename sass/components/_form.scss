@@ -1,37 +1,49 @@
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
   max-width: 800px;
   margin: auto;
-  padding: 30px;
+  padding: 20px;
 
   .form-field {
     display: flex;
     flex-direction: column;
 
     &.full {
-      grid-column: span 2;
+      grid-column: span 1;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    @extend %font-base;
+  }
+
+  input[type="submit"] {
+    background-color: $color-accent;
+    color: white;
+    @extend %btn;
+
+    &:hover {
+      background-color: darken($color-accent, 10%);
     }
   }
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-  @extend %font-base;
-}
+// A partir de md: dos columnas
+@include responsive(md) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
 
-input[type="submit"] {
-  background-color: $color-accent;
-  color: white;
-  @extend %btn;
-
-  &:hover {
-    background-color: darken($color-accent, 10%);
+    .form-field.full {
+      grid-column: span 2;
+    }
   }
 }

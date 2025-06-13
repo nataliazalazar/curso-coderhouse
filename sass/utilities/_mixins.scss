@@ -1,12 +1,30 @@
-@mixin responsive($breakpoint) {
+@mixin responsive($breakpoint, $direction: min) {
   @if $breakpoint == sm {
-    @media (min-width: $breakpoint-sm) {
-      @content;
+    @if $direction == min {
+      @media (min-width: $breakpoint-sm) { @content; }
+    } @else if $direction == max {
+      @media (max-width: $breakpoint-sm) { @content; }
     }
   }
   @else if $breakpoint == md {
-    @media (min-width: $breakpoint-md) {
-      @content;
+    @if $direction == min {
+      @media (min-width: $breakpoint-md) { @content; }
+    } @else if $direction == max {
+      @media (max-width: $breakpoint-md) { @content; }
+    }
+  }
+  @else if $breakpoint == lg {
+    @if $direction == min {
+      @media (min-width: $breakpoint-lg) { @content; }
+    } @else if $direction == max {
+      @media (max-width: $breakpoint-lg) { @content; }
+    }
+  }
+  @else if $breakpoint == xl {
+    @if $direction == min {
+      @media (min-width: $breakpoint-xl) { @content; }
+    } @else if $direction == max {
+      @media (max-width: $breakpoint-xl) { @content; }
     }
   }
 }

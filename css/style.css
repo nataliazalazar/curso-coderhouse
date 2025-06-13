@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .habilidades, .subtitulo,
 .sub,
-.sub-contacto, .titulo, .navbar-nav li a, input[type=text],
-input[type=email],
-textarea, footer p, body {
+.sub-contacto, .titulo, .navbar-nav li a, .form-grid input[type=text],
+.form-grid input[type=email],
+.form-grid textarea, footer p, body {
   font-family: "Montserrat", sans-serif;
 }
 
-input[type=submit] {
+.form-grid input[type=submit] {
   padding: 12px;
   border: none;
   border-radius: 4px;
@@ -78,39 +78,81 @@ footer .footer-contacto .contacto img {
   object-fit: contain;
 }
 
-@media (min-width: 576px) {
-  .navbar-brand img {
-    max-width: 120px;
-  }
-  .img-senal img {
-    width: 30%;
-  }
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
 }
+.form-grid .form-field {
+  display: flex;
+  flex-direction: column;
+}
+.form-grid .form-field.full {
+  grid-column: span 2;
+}
+
 @media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .form-grid .form-field.full {
+    grid-column: span 1;
+  }
   .section-principal {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: left;
-    padding: 60px 60px 0px 60px;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
   }
   .texto {
-    flex: 1 1 55%;
-    max-width: 500px;
-    text-align: left;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: center;
   }
   .imagen {
-    flex: 1 1 40%;
+    max-width: 100%;
     justify-content: center;
-    margin-bottom: 0;
   }
   .imagen img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 576px) {
+  .section-principal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .texto {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 0 1rem;
+  }
+  .imagen {
     width: 100%;
-    max-width: 500px;
+    display: flex;
+    justify-content: center;
+  }
+  .imagen img {
+    width: 90%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
   .titulo {
-    font-size: 35pt;
+    font-size: 2rem;
   }
 }
 .logo-madame {
@@ -275,37 +317,44 @@ footer .footer-contacto .contacto img {
 
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
   max-width: 800px;
   margin: auto;
-  padding: 30px;
+  padding: 20px;
 }
 .form-grid .form-field {
   display: flex;
   flex-direction: column;
 }
 .form-grid .form-field.full {
-  grid-column: span 2;
+  grid-column: span 1;
 }
-
-input[type=text],
-input[type=email],
-textarea {
+.form-grid input[type=text],
+.form-grid input[type=email],
+.form-grid textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
 }
-
-input[type=submit] {
+.form-grid input[type=submit] {
   background-color: #FF6633;
   color: white;
 }
-input[type=submit]:hover {
+.form-grid input[type=submit]:hover {
   background-color: rgb(255, 63.75, 0);
 }
 
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+  }
+  .form-grid .form-field.full {
+    grid-column: span 2;
+  }
+}
 .navbar-nav {
   display: flex;
   gap: 40px;
@@ -340,21 +389,19 @@ input[type=submit]:hover {
   overflow-x: hidden;
   flex-wrap: wrap;
 }
-
-.texto {
+.section-principal .texto {
   flex: 1 1 55%;
   max-width: 500px;
   text-align: left;
   margin: 0;
 }
-
-.imagen {
+.section-principal .imagen {
   flex: 1 1 40%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.imagen img {
+.section-principal .imagen img {
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -362,6 +409,40 @@ input[type=submit]:hover {
   object-fit: contain;
 }
 
+@media (max-width: 768px) {
+  .section-principal {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem 0rem 2rem;
+  }
+  .texto {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .imagen {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .imagen img {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .section-principal {
+    padding: 1rem 1rem 0rem 1rem;
+  }
+  .texto {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .imagen img {
+    width: 90%;
+    max-width: 250px;
+  }
+}
 .titulo {
   color: #FF6633;
   font-size: 35pt;
